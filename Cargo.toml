@@ -1,0 +1,22 @@
+[package]
+name = "chirp-pushover"
+version = "0.1.0"
+edition = "2021"
+description = "A command line tool to send push notifications through the Pushover app."
+authors = ["Vince Buffalo <vsbuffalo@gmail.com>"]
+keywords = ["pushover", "notification"]
+homepage = "https://github.com/vsbuffalo/chirp-pushover"
+repository = "https://github.com/vsbuffalo/chirp-pushover"
+license = "MIT"
+include = ["src/**/*", "scripts/**/*"]
+
+[dependencies]
+clap = { version = "4.5.11", features = ["derive"] }
+dirs = "5.0.1"
+pushover = "0.4.0"
+serde = { version = "1.0.204", features = ["derive"] }
+serde_yaml = "0.9.34"
+
+[[bin]]
+name = "chirp"
+path = "src/main.rs"
